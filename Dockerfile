@@ -10,7 +10,7 @@ RUN apt-get update && apt-get -y install aria2 nmap traceroute
 
 # install Python packages as the notebook user
 USER jovyan
-RUN pip install --no-cache-dir geopandas babypandas==0.1.5
+RUN pip install --no-cache-dir "numpy<2" geopandas babypandas==0.1.5
 
 # start a shell instead of Jupyter
 CMD ["/bin/bash"]
